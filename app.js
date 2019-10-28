@@ -26,14 +26,14 @@ $(document).ready(function(){
          
             $('#show').empty();
                 for ( var i = 0; i < results.length; i++) {
-                    var output = results[j].images.fixed_height.url;
-                    var still = results[j].images.fixed_height_still.url;
+                    var output = results[i].images.fixed_height.url;
+                    var still = results[i].images.fixed_height_still.url;
                     var image = $('<img>').attr("src", still).attr('data-animate', output).attr('data-still', still);
                     image.attr('data-state', 'still');
                     $('#show').prepend(image);
                     image.on('click', play);
                     
-                        var rating = results[j].rating;
+                        var rating = results[i].rating;
                         var displayRated = $('<p>').text("Rating: " + rating);
                         $('#show').prepend(displayRated);
             
