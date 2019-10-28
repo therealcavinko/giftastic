@@ -25,7 +25,7 @@ $(document).ready(function(){
             var results = response.data;
          
             $('#show').empty();
-                for ( var j = 0; j < results.length; j++) {
+                for ( var i = 0; i < results.length; i++) {
                     var output = results[j].images.fixed_height.url;
                     var still = results[j].images.fixed_height_still.url;
                     var image = $('<img>').attr("src", still).attr('data-animate', output).attr('data-still', still);
