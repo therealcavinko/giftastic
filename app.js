@@ -21,8 +21,8 @@ $(document).ready(function(){
     nfl + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";  
 
     $.ajax({url: queryURL, method: 'GET'})
-        .done(function(response) {
-            var results = response.data;
+    .done(function(response) {
+    var results = response.data;
          
             $('#show').empty();
                 for ( var i = 0; i < results.length; i++) {
